@@ -15,5 +15,5 @@ run:
     wandsas/privoxy
 
 test:
-	curl -x http://192.168.99.100:8118 \
+	curl -x http://localhost:8118 \
 		-L https://check.torproject.org/api/ip
