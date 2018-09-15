@@ -1,12 +1,12 @@
 #!/usr/bin/env make
 
 .PHONE: run
-ALL:	build
+ALL:	run
 
 build:
 	@docker build -t wandsas/privoxy .
 
-run:
+run: build
 	@docker run -d \
 		--restart always \
 		--link torproxy:torproxy \
